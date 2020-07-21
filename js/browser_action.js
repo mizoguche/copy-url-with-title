@@ -12,7 +12,7 @@ document.querySelector('#markdown').onclick = () => {
 };
 
 document.querySelector('#scrapbox').onclick = () => {
-  copy(tab => `[${tab.title} ${tab.url}]`);
+  copy(tab => `[${tab.title.replace(/[\[\]]/g,'')} ${tab.url}]`);
 };
 
 document.querySelector('#plain').onclick = () => {
